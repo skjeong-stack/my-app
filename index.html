@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="ko"><head>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>☀️ 2026 짧은 유부 여름방학 | 상하이 7.24–7.26</title>
@@ -45,9 +47,13 @@
   .tabs { display: flex; overflow-x: auto; padding: 0 16px; gap: 4px; }
   .tabs::-webkit-scrollbar { display: none; }
   .tab { padding: 14px 16px; cursor: pointer; font-size: 0.85rem; font-weight: 600; color: var(--gray);
-          border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.2s; }
+          border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.2s;
+          background: none; border-top: none; border-left: none; border-right: none;
+          font-family: inherit; outline: none; -webkit-tap-highlight-color: transparent;
+          touch-action: manipulation; user-select: none; }
   .tab.active { color: var(--rose); border-bottom-color: var(--rose); }
   .tab:hover { color: var(--rose); }
+  .tab:active { opacity: 0.7; }
 
   /* ── CONTENT ── */
   .section { display: none; padding: 24px 20px 60px; max-width: 780px; margin: 0 auto; }
@@ -354,23 +360,23 @@
 <!-- TABS -->
 <div class="tabs-wrap">
   <div class="tabs">
-    <div class="tab" onclick="switchTab('day1')">📅 Day 1</div>
-    <div class="tab" onclick="switchTab('day2')">📅 Day 2</div>
-    <div class="tab" onclick="switchTab('day3')">📅 Day 3</div>
-    <div class="tab" onclick="switchTab('hotel')">🏨 숙소·항공</div>
-    <div class="tab" onclick="switchTab('trend')">📸 SNS 스팟</div>
-    <div class="tab" onclick="switchTab('phrase')">💬 중국어 회화</div>
-    <div class="tab active" onclick="switchTab('currency')">💱 환율 계산기</div>
-    <div class="tab" onclick="switchTab('budget')">💰 예산 기록</div>
+    <button class="tab active" onclick="switchTab('day1')">📅 Day 1</button>
+    <button class="tab" onclick="switchTab('day2')">📅 Day 2</button>
+    <button class="tab" onclick="switchTab('day3')">📅 Day 3</button>
+    <button class="tab" onclick="switchTab('hotel')">🏨 숙소·항공</button>
+    <button class="tab" onclick="switchTab('trend')">📸 SNS 스팟</button>
+    <button class="tab" onclick="switchTab('phrase')">💬 중국어 회화</button>
+    <button class="tab" onclick="switchTab('currency')">💱 환율 계산기</button>
+    <button class="tab" onclick="switchTab('budget')">💰 예산 기록</button>
   </div>
 </div>
 
 <!-- DAY 1 -->
-<div class="section" id="day1">
+<div class="section active" id="day1">
   <div class="day-header">
     <div>
       <div class="day-badge">Day 1 · 7월 24일 목</div>
-      <div class="day-title">도착 &amp; 첫 탐험 🌆</div>
+      <div class="day-title">도착 & 첫 탐험 🌆</div>
       <div class="day-desc">신천지 · 티엔쯔팡 · 외탄 야경</div>
     </div>
   </div>
@@ -434,12 +440,12 @@
           </div>
         </div>
         <div class="act-desc">1930년대 석고문 양식의 골목. 유럽풍 거리 + 로컬 카페들. SNS 감성샷 찍기 딱 좋은 곳. 아이스크림 먹으며 산책.</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="신천지" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=700&q=80&auto=format&fit=crop" alt="신천지" onerror="this.style.display='none'">
         <div class="act-tip">💡 북쪽 블록(North Block) 위주로 둘러보기</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d1-3')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d1-3')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Xintiandi+Shanghai" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Xintiandi+Shanghai" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -462,7 +468,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d1-4')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d1-4')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Tianzifang+Shanghai" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Tianzifang+Shanghai" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -485,7 +491,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d1-5')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d1-5')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Din+Tai+Fung+Shanghai" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Din+Tai+Fung+Shanghai" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -504,12 +510,12 @@
           </div>
         </div>
         <div class="act-desc">상하이 최고의 야경. 황포강 너머 푸동 마천루 + 식민지 시대 건물들. 강변 산책로 따라 천천히 걷기. 야경 사진 찍기 최적 장소.</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1538428494232-aed3f1ce4d51?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="외탄 야경" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1538428494232-aed3f1ce4d51?w=700&q=80&auto=format&fit=crop" alt="외탄 야경" onerror="this.style.display='none'">
         <div class="act-tip">💡 정동 쪽 바(Bar Rouge, The Captain) 루프탑에서 한 잔 🍸</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d1-6')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d1-6')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=The+Bund+Wai+Tan+Shanghai" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=The+Bund+Wai+Tan+Shanghai" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -538,7 +544,7 @@
         <div class="act-top">
           <div class="act-icon-title">
             <span class="act-icon">🥐</span>
-            <span class="act-title">호텔 조식 &amp; 준비</span>
+            <span class="act-title">호텔 조식 & 준비</span>
             <span class="act-label">모닝 루틴</span>
           </div>
         </div>
@@ -564,12 +570,12 @@
           </div>
         </div>
         <div class="act-desc">상하이에서 가장 트렌디한 카페 거리. 플래그십 스토어, 로컬 브랜드 카페들이 줄지어. 추천: MANNER COFFEE, %Arabica, Seesaw Coffee.</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="카페" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80&auto=format&fit=crop" alt="카페" onerror="this.style.display='none'">
         <div class="act-tip">💡 소홍로(绍兴路) 숨은 카페 골목도 함께 탐방</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d2-2')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d2-2')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Anfu+Road+Shanghai+安福路" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Anfu+Road+Shanghai+安福路" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -588,12 +594,12 @@
           </div>
         </div>
         <div class="act-desc">역사적 플라타너스 가로수 + 1930년대 우캉빌딩이 있는 상하이 최고 인스타 스팟. 유럽 느낌의 골목 산책. 투명 우산이나 꽃 들고 촬영 트렌드.</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="우캉로" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=80&auto=format&fit=crop" alt="우캉로" onerror="this.style.display='none'">
         <div class="act-tip">💡 오전 11~12시가 빛이 제일 예쁨. 주말은 사람 많으니 평일 오전 추천</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d2-3')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d2-3')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Wukang+Road+Wukang+Building+Shanghai+武康路" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Wukang+Road+Wukang+Building+Shanghai+武康路" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -616,7 +622,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d2-4')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d2-4')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Nanxiang+Steamed+Bun+Shanghai+南翔馒头店" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Nanxiang+Steamed+Bun+Shanghai+南翔馒头店" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -635,12 +641,12 @@
           </div>
         </div>
         <div class="act-desc">1920년대 미국 컬럼비아 컨트리클럽 리노베이션 공간. 수영장·잔디·카페·편집샵. 상하이에서 가장 트렌디한 복합문화공간. 유럽 빌라 분위기 인생샷.</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="컬럼비아 서클" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=700&q=80&auto=format&fit=crop" alt="컬럼비아 서클" onerror="this.style.display='none'">
         <div class="act-tip">💡 HARMAY 화백 편집샵, Peet's Coffee 들러보기</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d2-5')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d2-5')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Columbia+Circle+Shanghai+上生新所" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Columbia+Circle+Shanghai+上生新所" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -663,7 +669,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d2-6')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d2-6')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Kerry+Centre+Shanghai+静安区" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Kerry+Centre+Shanghai+静安区" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -699,7 +705,7 @@
   <div class="day-header">
     <div>
       <div class="day-badge">Day 3 · 7월 26일 토</div>
-      <div class="day-title">올드 상하이 &amp; 귀국 🏯</div>
+      <div class="day-title">올드 상하이 & 귀국 🏯</div>
       <div class="day-desc">예원 · 남경동로 쇼핑 · 공항</div>
     </div>
   </div>
@@ -714,7 +720,7 @@
         <div class="act-top">
           <div class="act-icon-title">
             <span class="act-icon">🥐</span>
-            <span class="act-title">호텔 조식 &amp; 체크아웃</span>
+            <span class="act-title">호텔 조식 & 체크아웃</span>
             <span class="act-label">모닝 루틴</span>
           </div>
         </div>
@@ -740,12 +746,12 @@
           </div>
         </div>
         <div class="act-desc">명나라 시대 고전 정원. 중국식 정자·연못·금붕어. 성황묘 시장에서 구이링고 (귀령고), 유탸오 등 전통 먹거리 체험. 치파오 렌탈도 여기!</div>
-        <img class="act-img" src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=700&amp;q=80&amp;auto=format&amp;fit=crop" alt="예원" onerror="this.style.display='none'" style="display: none;">
+        <img class="act-img" src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=700&q=80&auto=format&fit=crop" alt="예원" onerror="this.style.display='none'">
         <div class="act-tip">💡 오픈 직후(오전 10시) 방문하면 한산. 티켓 앱으로 미리 구매</div>
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d3-2')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d3-2')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Yu+Garden+Shanghai+豫园" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Yu+Garden+Shanghai+豫园" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -768,7 +774,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d3-3')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d3-3')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Nanxiang+Steamed+Bun+Restaurant+Yu+Garden+Shanghai" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Nanxiang+Steamed+Bun+Restaurant+Yu+Garden+Shanghai" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -782,7 +788,7 @@
         <div class="act-top">
           <div class="act-icon-title">
             <span class="act-icon">🛍️</span>
-            <span class="act-title">남경동로 쇼핑 &amp; 마지막 카페</span>
+            <span class="act-title">남경동로 쇼핑 & 마지막 카페</span>
             <span class="act-label">쇼핑</span>
           </div>
         </div>
@@ -791,7 +797,7 @@
         <div class="act-actions">
           <button class="btn-edit" onclick="openEdit('d3-4')">✏️ 수정</button>
           <button class="btn-del" onclick="deleteAct('d3-4')">🗑</button>
-          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&amp;query=Starbucks+Reserve+Roastery+Shanghai+南京西路" target="_blank">🗺️ 구글맵</a>
+          <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Starbucks+Reserve+Roastery+Shanghai+南京西路" target="_blank">🗺️ 구글맵</a>
         </div>
       </div>
     </div>
@@ -805,7 +811,7 @@
         <div class="act-top">
           <div class="act-icon-title">
             <span class="act-icon">✈️</span>
-            <span class="act-title">공항 이동 &amp; 귀국</span>
+            <span class="act-title">공항 이동 & 귀국</span>
             <span class="act-label">이동</span>
           </div>
         </div>
@@ -830,7 +836,7 @@
     <div class="info-card-sub">아래 카드를 탭하면 선택 표시됩니다</div>
     <div class="hotel-grid">
       <div class="hotel-card" onclick="pickHotel(this)">
-        <img class="hotel-img" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="외탄" onerror="this.style.background:'#f0ece8'">
+        <img class="hotel-img" src="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=400&q=80&auto=format&fit=crop" alt="외탄" onerror="this.style.background:'#f0ece8'">
         <div class="hotel-body">
           <div class="hotel-name">⭐ 황포구 · 외탄</div>
           <div class="hotel-area">The Bund / Huangpu</div>
@@ -839,7 +845,7 @@
         </div>
       </div>
       <div class="hotel-card" onclick="pickHotel(this)">
-        <img class="hotel-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="신천지" onerror="this.style.background:'#f0ece8'">
+        <img class="hotel-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=400&q=80&auto=format&fit=crop" alt="신천지" onerror="this.style.background:'#f0ece8'">
         <div class="hotel-body">
           <div class="hotel-name">✨ 신천지 주변</div>
           <div class="hotel-area">Xintiandi / Luwan</div>
@@ -848,7 +854,7 @@
         </div>
       </div>
       <div class="hotel-card" onclick="pickHotel(this)">
-        <img class="hotel-img" src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="정안" onerror="this.style.background:'#f0ece8'">
+        <img class="hotel-img" src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=400&q=80&auto=format&fit=crop" alt="정안" onerror="this.style.background:'#f0ece8'">
         <div class="hotel-body">
           <div class="hotel-name">🏙️ 정안구</div>
           <div class="hotel-area">Jing'an District</div>
@@ -857,7 +863,7 @@
         </div>
       </div>
       <div class="hotel-card" onclick="pickHotel(this)">
-        <img class="hotel-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="루자쭈이" onerror="this.style.background:'#f0ece8'">
+        <img class="hotel-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=400&q=80&auto=format&fit=crop" alt="루자쭈이" onerror="this.style.background:'#f0ece8'">
         <div class="hotel-body">
           <div class="hotel-name">🌆 루자쭈이 · 푸동</div>
           <div class="hotel-area">Lujiazui / Pudong</div>
@@ -878,7 +884,7 @@
     <div class="info-card-title">인천(ICN) ↔ 상하이 푸동(PVG)</div>
     <div class="info-card-sub">비행시간 약 2시간 / 하루 10편 이상 운항</div>
     <table class="airline-table">
-      <tbody><tr>
+      <tr>
         <th>항공사</th>
         <th>특징</th>
         <th>가격대</th>
@@ -914,7 +920,7 @@
         <td>12~20만원</td>
         <td><span class="badge-safe">★★★★☆</span></td>
       </tr>
-    </tbody></table>
+    </table>
     <div class="tip-box">
       <strong>🔒 중국 항공사 안전한가요?</strong><br>
       중국동방항공, 중국국제항공 모두 IATA 국제 안전 기준을 통과한 정식 항공사예요.
@@ -972,7 +978,8 @@
   <div class="trend-grid">
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(102, 126, 234), rgb(118, 75, 162));">🌳</div><img class="trend-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="우캉로" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#667eea,#764ba2)';d.textContent='🌳';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&auto=format&fit=crop" alt="우캉로" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#667eea,#764ba2)';d.textContent='🌳';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">우캉로 투명우산 샷</div>
@@ -982,7 +989,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(240, 147, 251), rgb(245, 87, 108));">🏛</div><img class="trend-img" src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="상생신소" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f093fb,#f5576c)';d.textContent='🏛';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1533929736458-ca588d08c8be?w=400&q=80&auto=format&fit=crop" alt="상생신소" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f093fb,#f5576c)';d.textContent='🏛';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">상생신소 Columbia Circle</div>
@@ -992,7 +1000,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(79, 172, 254), rgb(0, 242, 254));">🌉</div><img class="trend-img" src="https://images.unsplash.com/photo-1538428494232-aed3f1ce4d51?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="외탄야경" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#4facfe,#00f2fe)';d.textContent='🌉';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1538428494232-aed3f1ce4d51?w=400&q=80&auto=format&fit=crop" alt="외탄야경" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#4facfe,#00f2fe)';d.textContent='🌉';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">외탄 야경 골든아워</div>
@@ -1002,7 +1011,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(67, 233, 123), rgb(56, 249, 215));">🏭</div><img class="trend-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="1933라오창팡" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#43e97b,#38f9d7)';d.textContent='🏭';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=400&q=80&auto=format&fit=crop" alt="1933라오창팡" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#43e97b,#38f9d7)';d.textContent='🏭';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">1933 라오창팡 건축샷</div>
@@ -1012,7 +1022,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(250, 112, 154), rgb(254, 225, 64));">🎨</div><img class="trend-img" src="https://images.unsplash.com/photo-1499678567-1e3b46bff0e4?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="M50그래피티" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#fa709a,#fee140)';d.textContent='🎨';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1499678567-1e3b46bff0e4?w=400&q=80&auto=format&fit=crop" alt="M50그래피티" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#fa709a,#fee140)';d.textContent='🎨';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">M50 창의원 그래피티</div>
@@ -1022,7 +1033,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(161, 140, 209), rgb(251, 194, 235));">🌸</div><img class="trend-img" src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="신천지골목" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a18cd1,#fbc2eb)';d.textContent='🌸';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&q=80&auto=format&fit=crop" alt="신천지골목" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a18cd1,#fbc2eb)';d.textContent='🌸';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">신천지 석고문 골목</div>
@@ -1033,11 +1045,12 @@
   </div>
 
   <!-- 맛집 -->
-  <div class="info-section-title">🍜 맛집 &amp; 카페</div>
+  <div class="info-section-title">🍜 맛집 & 카페</div>
   <div class="trend-grid">
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(246, 211, 101), rgb(253, 160, 133));">🥟</div><img class="trend-img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="소룡포" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='🥟';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=400&q=80&auto=format&fit=crop" alt="소룡포" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='🥟';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">가가소룡 소룡포</div>
@@ -1047,7 +1060,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(48, 207, 208), rgb(51, 8, 103));">🍵</div><img class="trend-img" src="https://images.unsplash.com/photo-1558618048-fb4cd4dd5020?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="헤이티밀크티" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#30cfd0,#330867)';d.textContent='🍵';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1558618048-fb4cd4dd5020?w=400&q=80&auto=format&fit=crop" alt="헤이티밀크티" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#30cfd0,#330867)';d.textContent='🍵';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">헤이티 (喜茶 HEYTEA)</div>
@@ -1057,7 +1071,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(11, 163, 96), rgb(60, 186, 146));">☕</div><img class="trend-img" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="스타벅스리저브" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0ba360,#3cba92)';d.textContent='☕';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=400&q=80&auto=format&fit=crop" alt="스타벅스리저브" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0ba360,#3cba92)';d.textContent='☕';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">스타벅스 리저브 로스터리</div>
@@ -1067,7 +1082,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(247, 112, 98), rgb(254, 81, 150));">🫕</div><img class="trend-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="홍소육" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f77062,#fe5196)';d.textContent='🫕';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=80&auto=format&fit=crop" alt="홍소육" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f77062,#fe5196)';d.textContent='🫕';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">홍소육 (紅燒肉) 맛집</div>
@@ -1077,7 +1093,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(255, 236, 210), rgb(252, 182, 159));">🧋</div><img class="trend-img" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="안푸로카페" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ffecd2,#fcb69f)';d.textContent='🧋';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=400&q=80&auto=format&fit=crop" alt="안푸로카페" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ffecd2,#fcb69f)';d.textContent='🧋';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">안푸로 카페 호핑</div>
@@ -1087,7 +1104,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(161, 196, 253), rgb(194, 233, 251));">🦀</div><img class="trend-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="게살요리" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a1c4fd,#c2e9fb)';d.textContent='🦀';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&q=80&auto=format&fit=crop" alt="게살요리" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a1c4fd,#c2e9fb)';d.textContent='🦀';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">게살 요리 (蟹黄)</div>
@@ -1102,7 +1120,8 @@
   <div class="trend-grid">
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(255, 154, 158), rgb(254, 207, 239));">🎁</div><img class="trend-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="팝마트" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ff9a9e,#fecfef)';d.textContent='🎁';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=400&q=80&auto=format&fit=crop" alt="팝마트" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ff9a9e,#fecfef)';d.textContent='🎁';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">팝마트 (Pop Mart / 泡泡玛特)</div>
@@ -1112,7 +1131,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(102, 126, 234), rgb(118, 75, 162));">💄</div><img class="trend-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="HARMAY뷰티" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#667eea,#764ba2)';d.textContent='💄';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=400&q=80&auto=format&fit=crop" alt="HARMAY뷰티" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#667eea,#764ba2)';d.textContent='💄';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">HARMAY 화백 뷰티샵</div>
@@ -1122,7 +1142,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(246, 211, 101), rgb(253, 160, 133));">👗</div><img class="trend-img" src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="Looknow편집샵" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='👗';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?w=400&q=80&auto=format&fit=crop" alt="Looknow편집샵" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='👗';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">Looknow 편집샵</div>
@@ -1132,17 +1153,19 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(79, 172, 254), rgb(0, 242, 254));">🏬</div><img class="trend-img" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="난징동루" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#4facfe,#00f2fe)';d.textContent='🏬';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=400&q=80&auto=format&fit=crop" alt="난징동루" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#4facfe,#00f2fe)';d.textContent='🏬';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">난징동루 쇼핑 거리</div>
-        <div class="trend-desc">보행자 전용 상하이 최대 상업지구. 미니소랜드·팝마트·M&amp;M 플래그십. 신세계 백화점. 기념품 쇼핑 끝판왕.</div>
+        <div class="trend-desc">보행자 전용 상하이 최대 상업지구. 미니소랜드·팝마트·M&M 플래그십. 신세계 백화점. 기념품 쇼핑 끝판왕.</div>
         <div class="trend-tags"><span class="trend-tag">#난징동루</span><span class="trend-tag">#南京东路</span><span class="trend-tag">#쇼핑</span></div>
       </div>
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(67, 233, 123), rgb(56, 249, 215));">🧴</div><img class="trend-img" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="로컬브랜드" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#43e97b,#38f9d7)';d.textContent='🧴';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=400&q=80&auto=format&fit=crop" alt="로컬브랜드" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#43e97b,#38f9d7)';d.textContent='🧴';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">중국 로컬 브랜드 쇼핑</div>
@@ -1152,7 +1175,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(250, 112, 154), rgb(254, 225, 64));">🎪</div><img class="trend-img" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="티엔쯔팡" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#fa709a,#fee140)';d.textContent='🎪';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=400&q=80&auto=format&fit=crop" alt="티엔쯔팡" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#fa709a,#fee140)';d.textContent='🎪';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">티엔쯔팡 공예 쇼핑</div>
@@ -1163,11 +1187,12 @@
   </div>
 
   <!-- 관광 -->
-  <div class="info-section-title">🏛️ 관광지 &amp; 문화</div>
+  <div class="info-section-title">🏛️ 관광지 & 문화</div>
   <div class="trend-grid">
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(12, 52, 131), rgb(162, 182, 223));">🏙️</div><img class="trend-img" src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="상하이타워" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0c3483,#a2b6df)';d.textContent='🏙️';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1537944434965-cf4679d1a598?w=400&q=80&auto=format&fit=crop" alt="상하이타워" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0c3483,#a2b6df)';d.textContent='🏙️';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">상하이 타워 전망대</div>
@@ -1177,7 +1202,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(212, 252, 121), rgb(150, 230, 161));">🪷</div><img class="trend-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="롱화사원" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#d4fc79,#96e6a1)';d.textContent='🪷';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80&auto=format&fit=crop" alt="롱화사원" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#d4fc79,#96e6a1)';d.textContent='🪷';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">롱화사원 (龙华寺)</div>
@@ -1187,20 +1213,22 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(240, 147, 251), rgb(245, 87, 108));">🎭</div><img class="trend-img" src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="예원야시장" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f093fb,#f5576c)';d.textContent='🎭';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=400&q=80&auto=format&fit=crop" alt="예원야시장" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f093fb,#f5576c)';d.textContent='🎭';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
-        <div class="trend-name">예원 &amp; 성황묘 야시장</div>
+        <div class="trend-name">예원 & 성황묘 야시장</div>
         <div class="trend-desc">명나라 정원 + 야시장. 저녁엔 조명 켜져서 낮보다 훨씬 예쁨. 탕후루·호떡·군만두 길거리 음식 천국.</div>
         <div class="trend-tags"><span class="trend-tag">#예원</span><span class="trend-tag">#豫园</span><span class="trend-tag">#야시장</span></div>
       </div>
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(48, 207, 208), rgb(102, 126, 234));">🎨</div><img class="trend-img" src="https://images.unsplash.com/photo-1558865869-c93f6f8482af?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="외탄미술관" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#30cfd0,#667eea)';d.textContent='🎨';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1558865869-c93f6f8482af?w=400&q=80&auto=format&fit=crop" alt="외탄미술관" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#30cfd0,#667eea)';d.textContent='🎨';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
-        <div class="trend-name">외탄 미술관 &amp; Bund 18</div>
+        <div class="trend-name">외탄 미술관 & Bund 18</div>
         <div class="trend-desc">식민지 시대 건물 내 현대 미술관. 루이비통·까르띠에 팝업 자주 열림. 건물 자체가 예술. 무료 전시도 있음.</div>
         <div class="trend-tags"><span class="trend-tag">#외탄미술관</span><span class="trend-tag">#Bund18</span><span class="trend-tag">#전시</span></div>
       </div>
@@ -1212,7 +1240,8 @@
   <div class="trend-grid">
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(255, 236, 210), rgb(252, 182, 159));">👘</div><img class="trend-img" src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="치파오체험" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ffecd2,#fcb69f)';d.textContent='👘';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">🔥</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=400&q=80&auto=format&fit=crop" alt="치파오체험" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#ffecd2,#fcb69f)';d.textContent='👘';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">🔥</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">치파오 (旗袍) 렌탈 체험</div>
@@ -1222,7 +1251,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(161, 140, 209), rgb(251, 194, 235));">🍵</div><img class="trend-img" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="다도체험" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a18cd1,#fbc2eb)';d.textContent='🍵';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400&q=80&auto=format&fit=crop" alt="다도체험" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#a18cd1,#fbc2eb)';d.textContent='🍵';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">전통 다도 체험</div>
@@ -1232,7 +1262,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(11, 163, 96), rgb(60, 186, 146));">🚢</div><img class="trend-img" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="황포강크루즈" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0ba360,#3cba92)';d.textContent='🚢';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1506929562872-bb421503ef21?w=400&q=80&auto=format&fit=crop" alt="황포강크루즈" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#0ba360,#3cba92)';d.textContent='🚢';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">황포강 야간 크루즈</div>
@@ -1242,7 +1273,8 @@
     </div>
     <div class="trend-card">
       <div class="trend-img-wrap">
-        <div class="trend-img-div" style="background: linear-gradient(135deg, rgb(246, 211, 101), rgb(253, 160, 133));">🌃</div><img class="trend-img" src="https://images.unsplash.com/photo-1567333971-b08e8e04b99e?w=400&amp;q=80&amp;auto=format&amp;fit=crop" alt="루프탑바" onerror="this.style.display='none';this.nextSibling&amp;&amp;this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='🌃';this.parentNode.insertBefore(d,this);" style="display: none;"><div class="trend-rank">✨</div>
+        <img class="trend-img" src="https://images.unsplash.com/photo-1567333971-b08e8e04b99e?w=400&q=80&auto=format&fit=crop" alt="루프탑바" onerror="this.style.display='none';this.nextSibling&&this.nextSibling.remove();var d=document.createElement('div');d.className='trend-img-div';d.style.background='linear-gradient(135deg,#f6d365,#fda085)';d.textContent='🌃';this.parentNode.insertBefore(d,this);">
+        <div class="trend-rank">✨</div>
       </div>
       <div class="trend-body">
         <div class="trend-name">루프탑 바 선셋 타임</div>
@@ -1335,7 +1367,7 @@
     <div class="budget-hero-title">💰 여행 예산 기록장</div>
     <div class="budget-summary">
       <div class="budget-stat">
-        <div class="budget-stat-num" id="b-total-budget">미설정</div>
+        <div class="budget-stat-num" id="b-total-budget">-</div>
         <div class="budget-stat-label">총 예산</div>
       </div>
       <div class="budget-stat">
@@ -1348,8 +1380,8 @@
       </div>
     </div>
     <div class="budget-progress-wrap">
-      <div class="budget-progress-bg"><div class="budget-progress-bar" id="b-bar" style="width: 0%; background: rgb(255, 255, 255);"></div></div>
-      <div class="budget-progress-label"><span id="b-pct-label">0% 사용</span><span id="b-per-person">(2인 합산)</span></div>
+      <div class="budget-progress-bg"><div class="budget-progress-bar" id="b-bar" style="width:0%"></div></div>
+      <div class="budget-progress-label"><span id="b-pct-label">0% 사용</span><span id="b-per-person"></span></div>
     </div>
     <label class="split-toggle">
       <input type="checkbox" id="split-toggle" onchange="renderBudget()">
@@ -1427,7 +1459,7 @@
 </div>
 
 <!-- 환율 계산기 -->
-<div class="section active" id="currency">
+<div class="section" id="currency">
   <div style="background:linear-gradient(135deg,#c9a84c,#f0d080);border-radius:16px;padding:20px;color:#fff;margin-bottom:20px;text-align:center">
     <div style="font-size:1.8rem;margin-bottom:6px">💱 환율 계산기</div>
     <div style="font-size:0.88rem;opacity:0.9">원화 ↔ 위안화 실시간 환산</div>
@@ -1436,8 +1468,8 @@
   <div class="currency-box">
     <div class="curr-rate-display">
       <div class="curr-rate-label">현재 적용 환율 (1 CNY)</div>
-      <div class="curr-rate-num" id="rate-display">190 원 (참고값)</div>
-      <div class="curr-rate-sub" id="rate-time">⚠️ 실시간 로딩 실패 — 참고 환율 적용</div>
+      <div class="curr-rate-num" id="rate-display">로딩 중...</div>
+      <div class="curr-rate-sub" id="rate-time">환율 불러오는 중</div>
     </div>
 
     <!-- KRW → CNY -->
@@ -1449,7 +1481,7 @@
       <div class="curr-arrow">→</div>
       <div class="curr-input-wrap">
         <label>🇨🇳 중국 위안 (CNY)</label>
-        <input class="curr-input" type="number" id="cny-result1" placeholder="0" readonly="" style="background:#f8f5f0">
+        <input class="curr-input" type="number" id="cny-result1" placeholder="0" readonly style="background:#f8f5f0">
       </div>
     </div>
 
@@ -1462,7 +1494,7 @@
       <div class="curr-arrow">→</div>
       <div class="curr-input-wrap">
         <label>🇰🇷 한국 원 (KRW)</label>
-        <input class="curr-input" type="number" id="krw-result2" placeholder="0" readonly="" style="background:#f8f5f0">
+        <input class="curr-input" type="number" id="krw-result2" placeholder="0" readonly style="background:#f8f5f0">
       </div>
     </div>
 
@@ -1483,14 +1515,14 @@
     </div>
 
     <table class="curr-table">
-      <tbody><tr><th>위안(CNY)</th><th>원(KRW) 약</th><th>참고</th></tr>
-      <tr id="ct-10"><td><strong>10</strong></td><td>1,900원</td><td style="color:var(--gray);font-size:0.78rem">작은 간식·음료</td></tr>
-      <tr id="ct-30"><td><strong>30</strong></td><td>5,700원</td><td style="color:var(--gray);font-size:0.78rem">길거리 음식 한 끼</td></tr>
-      <tr id="ct-50"><td><strong>50</strong></td><td>9,500원</td><td style="color:var(--gray);font-size:0.78rem">캐주얼 식당 1인</td></tr>
-      <tr id="ct-100"><td><strong>100</strong></td><td>19,000원</td><td style="color:var(--gray);font-size:0.78rem">소룡포 2인 식사</td></tr>
-      <tr id="ct-200"><td><strong>200</strong></td><td>38,000원</td><td style="color:var(--gray);font-size:0.78rem">편집샵 기념품</td></tr>
-      <tr id="ct-500"><td><strong>500</strong></td><td>95,000원</td><td style="color:var(--gray);font-size:0.78rem">쇼핑 여유 예산</td></tr>
-    </tbody></table>
+      <tr><th>위안(CNY)</th><th>원(KRW) 약</th><th>참고</th></tr>
+      <tr id="ct-10"></tr>
+      <tr id="ct-30"></tr>
+      <tr id="ct-50"></tr>
+      <tr id="ct-100"></tr>
+      <tr id="ct-200"></tr>
+      <tr id="ct-500"></tr>
+    </table>
 
     <div class="curr-update">⚠️ 환율은 실시간 API 기준. 실제 환전 시 수수료가 붙을 수 있어요. 환율 로딩 실패 시 1 CNY ≈ 190 KRW 적용.</div>
   </div>
@@ -1613,7 +1645,7 @@ function setCny(val) {
   calcCnyToKrw();
 }
 
-loadRate();
+try { loadRate(); } catch(e) { console.warn('Rate load failed:', e); }
 
 // ── BUDGET ──
 const BUDGET_KEY = 'shanghai_budget_2026';
@@ -1624,8 +1656,9 @@ function loadBudgetData() {
     const saved = localStorage.getItem(BUDGET_KEY);
     if (saved) budgetData = JSON.parse(saved);
   } catch(e) {}
-  if (budgetData.totalBudget) document.getElementById('budget-input').value = budgetData.totalBudget;
-  renderBudget();
+  const bi = document.getElementById('budget-input');
+  if (budgetData.totalBudget && bi) bi.value = budgetData.totalBudget;
+  try { renderBudget(); } catch(e) {}
 }
 
 function saveBudget() {
@@ -1733,14 +1766,14 @@ function renderBudget() {
   }
 }
 
-loadBudgetData();
+try { loadBudgetData(); } catch(e) { console.warn('Budget load failed:', e); }
 
 // Export current state as downloadable HTML
 function exportHTML() {
   // 예산 데이터를 HTML에 포함시켜서 공유해도 데이터 유지
   const budgetJson = JSON.stringify(budgetData);
   let html = '<!DOCTYPE html>' + document.documentElement.outerHTML;
-  // inject budget data as inline script before <script>try{localStorage.setItem('shanghai_budget_2026',"{\"totalBudget\":0,\"expenses\":[]}")}catch(e){}</script></body>
+  // inject budget data as inline script before </body>
   const inject = `<script>try{localStorage.setItem('${BUDGET_KEY}',${JSON.stringify(budgetJson)})}catch(e){}<\/script>`;
   html = html.replace('</body>', inject + '</body>');
   const blob = new Blob([html], {type: 'text/html;charset=utf-8'});
@@ -1870,6 +1903,5 @@ document.getElementById('add-modal-overlay').addEventListener('click', function(
   if (e.target === this) closeAddModal();
 });
 </script>
-
-
-</body></html>
+</body>
+</html>
